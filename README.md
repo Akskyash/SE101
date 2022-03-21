@@ -1,32 +1,10 @@
 # SE101
 
-Actors: 
+Introduction:
 
-User 
--	complete registration
--	provide address 
--	provide phone number
+Ride sharing is an application that will help single travelers to travel together with other people/travelers. In our system there are two types of users. One is passenger & other is driver. Both the drivers & passengers can register through their NID number and login to the system to use. The admin can login and can check driver license, vehicle license and check if there are enough seats for the requested passengers. Adding a feature allowing riders to request their preferred gender of drivers to create a personalized user experience, increases safety and build a competitive advantage for this application. So building this application can help people/travelers to find partners to travel with minimum costs for overall ride. At present there are lots of ride sharing application in the market. However, the users are unable to select their driver according to gender choices when requesting a ride. Vehicle rides, with its increasing popularity and rise to mainstream acceptance, completely revolutionized transportation. This application allowing users to request rides, has been a major player in this shift to on-demand personal drivers, thus will help in expanding user base and maximizing market presence.
 
-Passenger
--	Select ride
--	Set destination 
--	Pick-Up point
--	Cancel ride
--	Book for more seats
--	Select driver by biding
--	Give comment & ratings
--    Payment
+Features:
 
-Admin 
--	Verify user
--	Check driver License
--   Check Vehicle license
--   Check number of seats
-
-Driver
--	Accept ride
--	Decline ride
--    Place the price
--    Check vehicle condition
--    Collect payment
+A single traveler can look for other travelers to share a ride through the application. A traveler/passenger can appoint his/her drivers preferring to gender choices. Drivers can be selected according to their ratings. The driver license and vehicle license are kept in check by the admin. A traveler/passenger can fix their destination and request for more travelers to share rides. The travelers can even select their rides/vehicles according to the number of travelers. For a trip to faraway destination, the travelers can split their total fare and pay individually. Payment can be done by credit or cash in hand. A driver gets to accept or cancel the ride request according to his/her choice. A driver can give reference to other drivers about the ride request if he/she somehow denies a ride. A traveler /passenger can comment about the driver in complain box and rate accordingly.
 
