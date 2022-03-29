@@ -28,5 +28,5 @@ Driver
 -	Decline ride
 -    Place the price
 -    Check vehicle condition
--    Collect payment
+-    Collect payments
 
