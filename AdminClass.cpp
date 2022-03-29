@@ -63,4 +63,49 @@ int main()
     cout<<"Admin Methods: "<<endl;
     a.vehicleCondition();
     a.check_license();
+
+    int choice;
+    string vehicle;
+
+    cout<<"Select an option: " << endl;
+    cout<<"\n 1. Vehicle Condition " <<endl;
+    cout<<"\n 2. Driver License " <<endl;
+    cout<<"\n 3.Exit "<<endl;
+
+    switch(choice)
+    {
+    case 1:
+        cout<<"Vehicle Condition is Selected"<<endl;
+
+        a.vehicleCondition()
+        //string vehicle;
+        if(vehicle = "OK")
+        {
+            cout<<" The Vehcile is ok for ride " << endl;
+        }
+        else
+        {
+            cout<<" The Vehcile is not ok for ride " << endl;
+        }
+        break;
+
+    case 2:
+        cout<<"Driver License is Selected"<<endl;
+
+        a.check_license()
+        if(check_license == "OK")
+        {
+            cout<<" The Vehcile is ok for ride " << endl;
+        }
+        else
+        {
+            cout<<" The Vehcile is not ok for ride " << endl;
+        }
+        break;
+    case 3:
+        exit();
+        break;
+    }
+
+
 }
