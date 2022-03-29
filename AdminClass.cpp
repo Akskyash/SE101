@@ -65,7 +65,7 @@ int main()
     a.check_license();
 
     int choice;
-    string vehicle;
+    char * vehicle;
 
     cout<<"Select an option: " << endl;
     cout<<"\n 1. Vehicle Condition " <<endl;
@@ -77,16 +77,17 @@ int main()
     case 1:
         cout<<"Vehicle Condition is Selected"<<endl;
 
-        a.vehicleCondition()
-        //string vehicle;
-        if(vehicle = "OK")
+
+
+        if(vehicle == "OK")
         {
             cout<<" The Vehcile is ok for ride " << endl;
         }
-        else
+        else if(vehicle =="NOT OK")
         {
             cout<<" The Vehcile is not ok for ride " << endl;
         }
+        a.vehicleCondition()
         break;
 
     case 2:
