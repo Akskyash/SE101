@@ -1,20 +1,33 @@
 <html>
     <head>
-        <title>My Home</title>
+        <title>Form</title>
 </head>
 <body>
-    <h1>Home Sweet Home</h1>
+    <h1>Registration Form</h1>
    
 <form action= "../Control/Process.php" method="POST">
     <table>
-    <tr><td>Enter your name: </td>
-        <td><input type="text" placeholder="Full Name"></td></tr>
-   <tr><td> Enter your password: </td>
+    <tr><td>First Name: </td>
+        <td><input type="text"></td></tr>
+    <tr><td>Last Name: </td>
+        <td><input type="text"></td></tr>
+    <tr><td>Age: </td>
+        <td><input type="number"></td></tr>
+      <tr><td>Designation</td>
+      <td><input type="radio" name="gender">Junior Programmer
+      <input type="radio" name="gender">Senior Programmer
+    <input type="radio" name="gender">Project Lead</td></tr>
+    <tr><td>Preferred Language:</td>
+      <td><input type="checkbox">JAVA
+      <input type="checkbox">PHP
+    <input type="checkbox">C++</td></tr>
+    <tr><td>E-mail: </td>
+        <td><input type="email"></td></tr>
+    <tr><td> Password: </td>
       <td> <input type="password" ></td>
-      <tr><td>Select Gender</td>
-      <td><input type="radio" name="gender">male
-    <input type="radio" name="gender">female</td></tr>
-    <tr><td><input type="submit" name="submit" value = "Register"></td></tr>
+     <tr><td> <p>Please choose a file <input type = "button" value="Choose File"> No file chosen</p></td></tr>
+    <tr><td><input type="submit" name="Submit">
+    <input type="reset" name="Reset"></td></tr>
 
 </table>
 </form>
