@@ -1,0 +1,75 @@
+#include <iostream>
+#include <string.h>
+
+using namespace std;
+
+void findKeywords(string str);
+
+string keywords[] = {"if", "while", "for", "else", "return", "char", "int", "float", "double", "return", "if else", "else if", "void", "case", "switch", "goto", "volatile", "continue", "break", "true", "false"};
+
+int main() {
+    
+    string str;
+    cout << "\nEnter string: ";
+ 
+    getline(cin, str);
+    
+	findKeywords(str);
+  
+
+    return 0;
+}
+
+void findKeywords(string str)
+{
+    //cout << endl << endl;
+    cout << "Keywords: " << endl;
+ 
+    int len = str.length();
+	int size = sizeof(keywords)/sizeof(keywords[0]);
+	int i=0;
+	
+
+	
+	string key = "";
+	while(i<len)
+	{
+	
+		
+		while(true)
+		{
+		   
+			if(((int)str[i] >= 65 && (int)str[i] <= 122) || (int)str[i] == 95)
+			{
+				key += str[i++];
+			}
+			else if(str[i] == '"')
+			{
+			    key += str[i];
+			    i++;
+			    while(str[i] != '"')
+			    {
+			        key += str[i++];
+			       
+			    }
+			    i++;
+			   
+			}
+			else
+			{
+			   
+			    i++;
+				break;
+			}
+		}
+	
+		for(int j=0; j<size; j++)
+		{
+			if(key == keywords[j])
+			{
+				cout << key << endl;
+			}
+		}
+		key = "";
+	}
+}
