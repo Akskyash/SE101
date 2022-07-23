@@ -1,0 +1,165 @@
+#include <iostream>
+#include <string.h>
+
+using namespace std;
+
+class SymbolTable
+{
+    string id[5];
+    string op[5];
+    string punc[5];
+    string releaseToken[5];
+
+    int idCount = 0;
+    int opCount = 0;
+    int puncCount = 0;
+    int rtCount = 0;
+
+   public:
+    SymbolTable(string str1, string str2, string str3)
+    {
+        if(str1 != "")
+        {
+            if(str1 == "op")
+            {
+                storeOp(str1);
+            }
+            else if(str1 == "punc")
+            {
+                storePunc(str1);
+            }
+            else
+            {
+                storeId(str1);
+            }
+        }
+        if(str2 != "")
+        {
+            if(str2 == "op")
+            {
+                storeOp(str2);
+            }
+            else if(str2 == "punc")
+            {
+                storePunc(str2);
+            }
+            else
+            {
+                storeId(str2);
+            }
+        }
+        if(str3 != "")
+        {
+            if(str3 == "op")
+            {
+                storeOp(str3);
+            }
+            else if(str3 == "punc")
+            {
+                storePunc(str3);
+            }
+            else
+            {
+                storeId(str3);
+            }
+        }
+    }
+
+    void storeId(string s)
+    {
+        id[idCount++] = s;
+    }
+
+    void storeOp(string s)
+    {
+        op[opCount++] = s;
+    }
+
+    void storePunc(string s)
+    {
+        punc[puncCount++] = s;
+    }
+
+    void searchToken(string s)
+    {
+        bool flag = false;
+        for(int i=0; i<idCount; i++)
+        {
+            if(id[i] == s)
+            {
+                flag = true;
+                releaseToken[rtCount++] = id[i];
+                cout << "Token Found" << endl;
+            }
+        }
+
+        for(int i=0; i<opCount; i++)
+        {
+            if(op[i] == s)
+            {
+                flag = true;
+                releaseToken[rtCount++] = id[i];
+                cout << "Token Found" << endl;
+            }
+        }
+
+        for(int i=0; i<puncCount; i++)
+        {
+            if(punc[i] == s)
+            {
+                flag = true;
+                releaseToken[rtCount++] = id[i];
+                cout << "Token Found" << endl;
+            }
+        }
+
+        if(!flag)
+        {
+            cout << "Token Not Found" << endl;
+        }
+    }
+
+    void printAll()
+    {
+        cout << "Identifiers: ";
+        for(int i=0; i<idCount; i++)
+        {
+            cout << id[i] << " ";
+        }
+        cout << endl;
+
+        cout << "Operators: ";
+        for(int i=0; i<opCount; i++)
+        {
+            cout << op[i] << " ";
+        }
+        cout << endl;
+
+        cout << "Punctuations: ";
+        for(int i=0; i<puncCount; i++)
+        {
+            cout << punc[i] << " ";
+        }
+        cout << endl;
+    }
+};
+
+int main()
+{
+    string s1,s2,s3;
+    cout << "Enter 1st string: ";
+    cin >> s1;
+    cout << "Enter 2nd string: ";
+    cin >> s2;
+    cout << "Enter 3rd string: ";
+    cin >> s3;
+
+    SymbolTable st(s1,s2,s3);
+    st.printAll();
+
+    string s;
+    cout << "SearchToken: ";
+    cin >> s;
+
+    st.searchToken(s);
+}
